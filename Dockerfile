@@ -1,5 +1,5 @@
 # Dockerfile (Phiên bản Debian - Bao chạy)
-FROM elixir:1.18-slim AS builder
+FROM elixir:1.18.3-otp-27 AS builder
 WORKDIR /app
 RUN apt-get update && apt-get install -y build-essential git && apt-get clean
 COPY . .
